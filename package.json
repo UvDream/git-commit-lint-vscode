@@ -2,7 +2,8 @@
 	"name": "git-commit-lint-vscode",
 	"displayName": "git-commit-lint-vscode",
 	"description": "git提交规范",
-	"version": "0.0.2",
+	"version": "1.0.0",
+	"publisher": "UvDream",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -10,6 +11,20 @@
 		"Other"
 	],
 	"license": "MIT",
+	"homepage": "https://github.com/UvDream/git-commit-lint-vscode/blob/master/README.md",
+	"bugs": {
+		"url": "https://github.com/UvDream/git-commit-lint-vscode/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/UvDream/git-commit-lint-vscode"
+	},
+	"keywords": [
+		"git",
+		"emoji",
+		"lint"
+	],
+	"icon": "static/logo.png",
 	"activationEvents": [
 		"onCommand:extension.gitEmoji",
 		"onCommand:extension.switching"
