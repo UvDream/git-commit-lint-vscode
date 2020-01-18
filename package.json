@@ -2,7 +2,7 @@
 	"name": "git-commit-lint-vscode",
 	"displayName": "git-commit-lint-vscode",
 	"description": "git提交规范",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"publisher": "UvDream",
 	"engines": {
 		"vscode": "^1.41.0"
@@ -56,7 +56,7 @@
 		}
 	},
 	"scripts": {
-		"publish": "vscode publish",
+		"pub": "vsce publish",
 		"vscode:prepublish": "yarn run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
