@@ -42,7 +42,7 @@
 			},
 			{
 				"command": "extension.switching",
-				"title": "git emoji label switching"
+				"title": "git commit lint switch"
 			}
 		],
 		"menus": {
