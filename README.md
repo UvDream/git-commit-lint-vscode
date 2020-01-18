@@ -34,6 +34,13 @@
 
 ![](static/git-commit-lint.png)
 
+## 使用说明
+
+- 1
+  ![](static/first.png)
+- 2
+  ![](static/then.png)
+
 ## 下载
 
 在 vscode 扩展中搜索 `git-commit-lint-vscode` 即可找到该插件。
