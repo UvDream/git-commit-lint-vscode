@@ -30,6 +30,10 @@
 |  config  |  🔧  |       修改配置文件        |
 |   git    |  🙈  | 添加或修改.gitignore 文件 |
 
+## 使用效果
+
+
+
 ## 下载
 
 在 vscode 扩展中搜索 `git-commit-lint-vscode` 即可找到该插件。
