@@ -49,4 +49,4 @@
 
 使用中可以在这提问,有什么需求同样可以在这提出来
 
-[https://github.com/UvDream/git-commit-lint-vscode/issues
+https://github.com/UvDream/git-commit-lint-vscode/issues
