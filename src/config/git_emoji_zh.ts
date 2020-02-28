@@ -1,8 +1,8 @@
 /*
  * @Author: wangzhongjie
  * @Date: 2020-01-17 19:47:44
- * @LastEditors  : wangzhongjie
- * @LastEditTime : 2020-01-18 10:41:04
+ * @LastEditors: wangzhongjie
+ * @LastEditTime: 2020-02-28 11:30:46
  * @Description:提交规范
  * @Email: UvDream@163.com
  */
@@ -15,7 +15,7 @@ export interface Emoji {
 let emojis: Array<Emoji> = [
   {
     emoji: "feat✨",
-    code: ":fire:",
+    code: ":sparkles:",
     description: "引入新功能",
     name: "新功能"
   },
@@ -32,14 +32,20 @@ let emojis: Array<Emoji> = [
     name: "样式"
   },
   {
-    emoji: "docs📖",
-    code: ":lipstick:",
+    emoji: "format🎉",
+    code: ":tada:",
+    description: "格式化代码",
+    name: "格式化"
+  },
+  {
+    emoji: "docs📝",
+    code: ":pencil:",
     description: "添加/更新文档",
     name: "文档"
   },
   {
     emoji: "perf👌",
-    code: ":white_check_mark:",
+    code: ":ok_hand:",
     description: "提高性能/优化",
     name: "优化"
   },
@@ -51,13 +57,13 @@ let emojis: Array<Emoji> = [
   },
   {
     emoji: "test✅",
-    code: ":rocket:",
+    code: ":white_check_mark:",
     description: "增加测试代码",
     name: "测试"
   },
   {
     emoji: "refactor🎨",
-    code: ":sparkles:",
+    code: ":art:",
     description: "改进代码结构/代码格式",
     name: "优化"
   },
@@ -69,13 +75,13 @@ let emojis: Array<Emoji> = [
   },
   {
     emoji: "file📦",
-    code: ":pencil:",
+    code: ":package:",
     description: "添加新文件",
     name: "新文件"
   },
   {
     emoji: "publish🚀",
-    code: ":tada:",
+    code: ":rocket:",
     description: "发布新版本",
     name: "新版本"
   },
