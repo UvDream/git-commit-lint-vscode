@@ -32,8 +32,8 @@ let emojis: Array<Emoji> = [
     name: "样式"
   },
   {
-    emoji: "format🎉",
-    code: ":tada:",
+    emoji: "format🥚",
+    code: ":egg:",
     description: "格式化代码",
     name: "格式化"
   },
