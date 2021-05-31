@@ -2,7 +2,7 @@
  * @Author: wangzhongjie
  * @Date: 2020-01-17 19:47:44
  * @LastEditors: wangzhongjie
- * @LastEditTime: 2020-02-28 13:42:35
+ * @LastEditTime: 2021-05-31 10:10:17
  * @Description:主入口
  * @Email: UvDream@163.com
  */
@@ -22,9 +22,8 @@ export function activate(context: vscode.ExtensionContext) {
       const method_key = context.globalState.get("display_method", "default");
       let items = emojis.map(display_method[method_key]);
       // 显示选项列表，提示用户选择
-      vscode.window.showQuickPick(items).then(function(selected) {
+      vscode.window.showQuickPick(items).then(function (selected) {
         if (selected) {
-          console.log(uri);
           vscode.commands.executeCommand("workbench.view.scm");
           if (uri) {
             let selectedRepository = git.repositories.find(repository => {
@@ -71,4 +70,4 @@ function getGitExtension() {
   return gitExtension && gitExtension.getAPI(1);
 }
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }

@@ -1,6 +1,8 @@
 import { Emoji } from '../git_emoji_zh'
 
 export function use_label(emoji: Emoji) {
+  console.log("使用label");
+
   return {
     label: `${emoji.emoji} ${emoji.description}`,
     code: emoji.code,
