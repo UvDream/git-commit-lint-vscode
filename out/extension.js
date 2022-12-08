@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * @Author: wangzhongjie
  * @Date: 2020-01-17 19:47:44
- * @LastEditors: wangzhongjie
- * @LastEditTime: 2021-05-31 10:10:17
+ * @LastEditors: Lanrri
+ * @LastEditTime: 2022-12-08 15:28:41
  * @Description:主入口
  * @Email: UvDream@163.com
  */
@@ -26,7 +26,7 @@ function activate(context) {
                 vscode.commands.executeCommand("workbench.view.scm");
                 if (uri) {
                     let selectedRepository = git.repositories.find(repository => {
-                        return repository.rootUri.path === uri._rootUri.path;
+                        return repository.rootUri.path === uri.rootUri.path;
                     });
                     if (selectedRepository) {
                         prefixCommit(selectedRepository, selected.emoji);
