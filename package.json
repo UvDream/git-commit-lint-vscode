@@ -2,7 +2,7 @@
 	"name": "git-commit-lint-vscode",
 	"displayName": "git-commit-lint-vscode",
 	"description": "git提交规范",
-	"version": "1.3.0",
+	"version": "1.5.0",
 	"publisher": "UvDream",
 	"engines": {
 		"vscode": "^1.41.0"
