@@ -30,31 +30,45 @@
 		"onCommand:extension.switching"
 	],
 	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.gitEmoji",
-				"title": "git emoji commit message",
-				"icon": {
-					"dark": "static/icon.svg",
-					"light": "static/icon_light.svg"
-				}
-			},
-			{
-				"command": "extension.switching",
-				"title": "git commit lint switch"
-			}
-		],
-		"menus": {
-			"scm/title": [
-				{
-					"when": "scmProvider == git",
-					"command": "extension.gitEmoji",
-					"group": "navigation"
-				}
-			]
-		}
-	},
+  "contributes": {
+    "configuration": {
+      "title": "git-commit-lint-vscode",
+      "properties": {
+        "gitCommitLintVscode.gitCommitFormat": {
+          "type": "string",
+          "default": "emoji",
+          "description": "git 提交格式，使用 emoji 还是 code",
+          "enum": [
+            "emoji",
+            "code"
+          ]
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.gitEmoji",
+        "title": "git emoji commit message",
+        "icon": {
+          "dark": "static/icon.svg",
+          "light": "static/icon_light.svg"
+        }
+      },
+      {
+        "command": "extension.switching",
+        "title": "git commit lint switch1"
+      }
+    ],
+    "menus": {
+      "scm/title": [
+        {
+          "when": "scmProvider == git",
+          "command": "extension.gitEmoji",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
 	"scripts": {
 		"pub": "vsce publish",
 		"vscode:prepublish": "yarn run compile",
