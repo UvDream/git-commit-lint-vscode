@@ -40,7 +40,16 @@ export const activate = (context: vscode.ExtensionContext) => {
       const selectedRepository = git.repositories[selectedRepositoryIndex];
       if (selectedRepository) {
         prefixCommit(selectedRepository, emoji);
-      
+        // 存在多个存储库时，关闭其他存储库，定位到选择的存储库并聚焦输入框
+        vscode.commands.executeCommand('list.collapseAll');
+        vscode.commands.executeCommand('list.focusFirst');
+        for (let i = 0; i < selectedRepositoryIndex; i++) {
+          vscode.commands.executeCommand('list.focusDown');
+        }
+        vscode.commands.executeCommand('list.expand');
+        vscode.commands.executeCommand('list.expand');
+        vscode.commands.executeCommand('list.select');
+        vscode.commands.executeCommand('list.toggleExpand');
       }
     } else {
       for (let repo of git.repositories) {
