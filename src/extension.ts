@@ -1,9 +1,9 @@
 /*
  * @Author: wangzhongjie
  * @Date: 2020-01-17 19:47:44
- * @LastEditors: Lanrri
- * @LastEditTime: 2022-12-08 15:28:41
- * @Description:主入口
+ * @LastEditors: FreezeNow
+ * @LastEditTime: 2023-03-08 13:11:41
+ * @Description: 主入口
  * @Email: UvDream@163.com
  */
 import * as vscode from 'vscode';
@@ -25,14 +25,22 @@ export const activate = (context: vscode.ExtensionContext) => {
       return;
     }
     const { emoji } = selected;
+    vscode.commands.executeCommand('workbench.scm.focus');
     if (git.repositories.length === 1) {
+      // 确保聚焦到输入框，参考 https://github.com/microsoft/vscode/issues/131006#issuecomment-915751155
+      vscode.commands.executeCommand('list.focusFirst');
+      vscode.commands.executeCommand('list.select');
       prefixCommit(git.repositories[0], emoji);
+      return;
     }
-    vscode.commands.executeCommand('workbench.view.scm');
     if (uri) {
-      const selectedRepository = git.repositories.find((repository) => repository.rootUri.path === uri.rootUri.path);
+      const selectedRepositoryIndex = git.repositories.findIndex(
+        (repository) => repository.rootUri.path === uri.rootUri.path
+      );
+      const selectedRepository = git.repositories[selectedRepositoryIndex];
       if (selectedRepository) {
         prefixCommit(selectedRepository, emoji);
+      
       }
     } else {
       for (let repo of git.repositories) {
