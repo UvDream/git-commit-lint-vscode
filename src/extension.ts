@@ -2,7 +2,7 @@
  * @Author: wangzhongjie
  * @Date: 2020-01-17 19:47:44
  * @LastEditors: FreezeNow
- * @LastEditTime: 2023-03-08 13:11:41
+ * @LastEditTime: 2023-03-08 14:41:35
  * @Description: 主入口
  * @Email: UvDream@163.com
  */
@@ -94,9 +94,16 @@ export const activate = (context: vscode.ExtensionContext) => {
 };
 // 选完填入操作
 const prefixCommit = (repository: Repository, prefix: String) => {
-  repository.inputBox.value !== ''
-    ? ((repository.inputBox.value = ''), (repository.inputBox.value = `${prefix}${repository.inputBox.value}`))
-    : (repository.inputBox.value = `${prefix}${repository.inputBox.value}`);
+  const coverInputValue = vscode.workspace.getConfiguration().get('gitCommitLintVscode.coverInputValue');
+  if (coverInputValue) {
+    repository.inputBox.value = `${prefix}`;
+    //! 不删除是因为不知道为什么要先清空再赋值，所以注释掉了原代码，测试了一下修改后的代码，感觉也没发现什么问题啊
+    // repository.inputBox.value !== ''
+    // ? ((repository.inputBox.value = ''), (repository.inputBox.value = `${prefix}${repository.inputBox.value}`))
+    // : (repository.inputBox.value = `${prefix}${repository.inputBox.value}`);
+  } else {
+    repository.inputBox.value = `${prefix}${repository.inputBox.value}`;
+  }
 };
 // 点击小图标进入插件
 const getGitExtension = () => {
