@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.use_emoji = void 0;
 function use_emoji(emoji) {
     console.log("使用表情");
     return {
