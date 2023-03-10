@@ -47,6 +47,12 @@
 
 在 vscode 扩展中搜索 `git-commit-lint-vscode` 即可找到该插件。
 
+## 插件配置
+
+你可以在 vscode 的 文件 -> 首选项 -> 设置 -> 扩展 -> git-commit-lint-vscode 中对该插件进行配置，目前可选的配置项为：
+1. 是否覆盖提交内容
+2. 使用 emoji 还是 code（兼容之前的设置方式）
+
 ## issues
 
 使用中可以在这提问,有什么需求同样可以在这提出来
