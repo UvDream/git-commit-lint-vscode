@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function use_emoji(emoji) {
-    console.log("使用表情");
+function customItems(emoji) {
     return {
         label: `${emoji.emoji}${emoji.code}: ${emoji.description}`,
         code: emoji.code,
@@ -9,5 +8,5 @@ function use_emoji(emoji) {
         description: '[' + emoji.name + ']',
     };
 }
-exports.use_emoji = use_emoji;
-//# sourceMappingURL=use-emoji.js.map
+exports.customItems = customItems;
+//# sourceMappingURL=custom.js.map

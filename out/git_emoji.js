@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let emojis = [
+const emojis = [
     {
         emoji: "✨",
         code: "feat",
@@ -93,4 +93,4 @@ let emojis = [
     }
 ];
 exports.default = emojis;
-//# sourceMappingURL=git_emoji_zh.js.map
+//# sourceMappingURL=git_emoji.js.map
