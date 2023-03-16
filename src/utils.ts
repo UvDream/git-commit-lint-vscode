@@ -4,7 +4,7 @@
  * @Date: 2023-03-16 14:18:17
  * @Description: 
  * @LastEditors: Lanrri
- * @LastEditTime: 2023-03-16 16:13:55
+ * @LastEditTime: 2023-03-16 16:33:54
  */
 import * as vscode from 'vscode'
 import { GitExtension, Repository } from './git'
@@ -20,7 +20,7 @@ const customItems = (emoji: CustomType[], custom_key: string) => {
     })
     return {
       value,
-      label: `${value} ${item.type}`,
+      label: `${value} ${item.name}`,
       description: '[' + item.description + ']',
     }
   })

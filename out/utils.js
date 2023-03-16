@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @Date: 2023-03-16 14:18:17
  * @Description:
  * @LastEditors: Lanrri
- * @LastEditTime: 2023-03-16 16:13:55
+ * @LastEditTime: 2023-03-16 16:33:54
  */
 const vscode = require("vscode");
 const DEFAULT_CUSTOM_FORMAT = '${code}${emoji}: ';
@@ -27,7 +27,7 @@ const customItems = (emoji, custom_key) => {
         });
         return {
             value,
-            label: `${value} ${item.type}`,
+            label: `${value} ${item.name}`,
             description: '[' + item.description + ']',
         };
     });
