@@ -1,94 +1,184 @@
 {
-	"name": "git-commit-lint-vscode",
-	"displayName": "git-commit-lint-vscode",
-	"description": "git提交规范",
-	"version": "1.6.0",
-	"publisher": "UvDream",
-	"engines": {
-		"vscode": "^1.76.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"license": "MIT",
-	"homepage": "https://github.com/UvDream/git-commit-lint-vscode/blob/master/README.md",
-	"bugs": {
-		"url": "https://github.com/UvDream/git-commit-lint-vscode/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/UvDream/git-commit-lint-vscode"
-	},
-	"keywords": [
-		"git",
-		"emoji",
-		"lint"
-	],
-	"icon": "static/logo.png",
-	"activationEvents": [
-		"onCommand:extension.gitEmoji",
-		"onCommand:extension.switching"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"configuration": {
-			"title": "git-commit-lint-vscode",
-			"properties": {
-				"gitCommitLintVscode.gitCommitFormat": {
-					"type": "string",
-					"default": "emoji",
-					"description": "git 提交格式，使用 emoji 还是 code",
-					"enum": [
-						"emoji",
-						"code"
-					]
-				},
-				"gitCommitLintVscode.coverInputValue": {
-					"type": "boolean",
-					"default": true,
-					"description": "是否覆盖提交信息"
-				}
-			}
-		},
-		"commands": [
-			{
-				"command": "extension.gitEmoji",
-				"title": "git emoji commit message",
-				"icon": {
-					"dark": "static/icon.svg",
-					"light": "static/icon_light.svg"
-				}
-			},
-			{
-				"command": "extension.switching",
-				"title": "git commit lint switch1"
-			}
-		],
-		"menus": {
-			"scm/title": [
-				{
-					"when": "scmProvider == git",
-					"command": "extension.gitEmoji",
-					"group": "navigation"
-				}
-			]
-		}
-	},
-	"scripts": {
-		"pub": "vsce publish",
-		"vscode:prepublish": "yarn run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "yarn run compile",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/mocha": "^10.0.1",
-		"@types/node": "^18.14.6",
-		"@types/vscode": "^1.76.0",
-		"mocha": "^10.2.0",
-		"tslint": "^6.1.3",
-		"typescript": "^4.9.5",
-		"@vscode/test-electron": "^2.3.0"
-	}
+  "name": "git-commit-lint-vscode",
+  "displayName": "git-commit-lint-vscode",
+  "description": "git提交规范",
+  "version": "1.6.0",
+  "publisher": "UvDream",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/UvDream/git-commit-lint-vscode/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/UvDream/git-commit-lint-vscode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UvDream/git-commit-lint-vscode"
+  },
+  "keywords": [
+    "git",
+    "emoji",
+    "lint"
+  ],
+  "icon": "static/logo.png",
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "git-commit-lint-vscode",
+      "properties": {
+        "gitCommitLintVscode.customFormat": {
+          "type": "string",
+          "default": "${type}${emoji}: ",
+          "description": "自定义 git 提交格式"
+        },
+        "gitCommitLintVscode.customType": {
+          "type": "array",
+          "default": [
+            {
+              "emoji": "✨",
+              "type": "feat",
+              "name": "引入新功能",
+              "description": "新功能"
+            },
+            {
+              "emoji": "🐛",
+              "type": "fix",
+              "name": "修复bug",
+              "description": "bug"
+            },
+            {
+              "emoji": "💄",
+              "type": "style",
+              "name": "更新UI样式文件",
+              "description": "样式"
+            },
+            {
+              "emoji": "🥚",
+              "type": "format",
+              "name": "格式化代码",
+              "description": "格式化"
+            },
+            {
+              "emoji": "📝",
+              "type": "docs",
+              "name": "添加/更新文档",
+              "description": "文档"
+            },
+            {
+              "emoji": "👌",
+              "type": "perf",
+              "name": "提高性能/优化",
+              "description": "优化"
+            },
+            {
+              "emoji": "🎉",
+              "type": "init",
+              "name": "初次提交/初始化项目",
+              "description": "初始化"
+            },
+            {
+              "emoji": "✅",
+              "type": "test",
+              "name": "增加测试代码",
+              "description": "测试"
+            },
+            {
+              "emoji": "🎨",
+              "type": "refactor",
+              "name": "改进代码结构/代码格式",
+              "description": "优化"
+            },
+            {
+              "emoji": "🚑",
+              "type": "patch",
+              "name": "添加重要补丁",
+              "description": "补丁"
+            },
+            {
+              "emoji": "📦",
+              "type": "file",
+              "name": "添加新文件",
+              "description": "新文件"
+            },
+            {
+              "emoji": "🚀",
+              "type": "publish",
+              "name": "发布新版本",
+              "description": "新版本"
+            },
+            {
+              "emoji": "📌",
+              "type": "tag",
+              "name": "发布版本/添加标签",
+              "description": "书签"
+            },
+            {
+              "emoji": "🔧",
+              "type": "config",
+              "name": "修改配置文件",
+              "description": "配置"
+            },
+            {
+              "emoji": "🙈",
+              "type": "git",
+              "name": "添加或修改.gitignore文件",
+              "description": "不可见"
+            }
+          ],
+          "additionalProperties": true,
+          "description": "自定义 git 提交类型"
+        },
+        "gitCommitLintVscode.coverInputValue": {
+          "type": "boolean",
+          "default": true,
+          "description": "是否覆盖提交信息"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.gitEmoji",
+        "title": "git emoji commit message",
+        "icon": {
+          "dark": "static/icon.svg",
+          "light": "static/icon_light.svg"
+        }
+      },
+      {
+        "command": "extension.switching",
+        "title": "git commit lint switch1"
+      }
+    ],
+    "menus": {
+      "scm/title": [
+        {
+          "when": "scmProvider == git",
+          "command": "extension.gitEmoji",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "pub": "vsce publish",
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.14.6",
+    "@types/vscode": "^1.76.0",
+    "mocha": "^10.2.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.9.5",
+    "@vscode/test-electron": "^2.3.0"
+  }
 }

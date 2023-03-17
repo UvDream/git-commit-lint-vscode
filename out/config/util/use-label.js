@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.use_label = void 0;
 function use_label(emoji) {
     console.log("使用label");
     return {
