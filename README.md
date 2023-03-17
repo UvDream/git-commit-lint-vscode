@@ -49,9 +49,108 @@
 
 ## 插件配置
 
+![](static/extend.png)
+
 你可以在 vscode 的 文件 -> 首选项 -> 设置 -> 扩展 -> git-commit-lint-vscode 中对该插件进行配置，目前可选的配置项为：
-1. 是否覆盖提交内容，默认为是。如果取消勾选，则会在之前的提交信息前插入 emoji 或者 code。
-2. 使用 emoji 还是 code（兼容之前的设置方式），默认为 emoji。如果选为 code，则插入的信息中会移除 emoji 字符
+
+1. Custom Format: 是否覆盖提交信息, 默认为`是`。如果取消勾选，则会在之前的提交信息前插入 emoji 或者 code。
+2. Custom Format: 自定义 git 提交格式, 默认为`${emoji}${code}: `。可以完全自定义 参数取`Custom Type`里面的`key`
+3. Custom Type: 自定义 git 提交类型, 默认为
+
+```json
+[
+  {
+    "emoji": "✨",
+    "type": "feat",
+    "name": "引入新功能",
+    "description": "新功能"
+  },
+  {
+    "emoji": "🐛",
+    "type": "fix",
+    "name": "修复bug",
+    "description": "bug"
+  },
+  {
+    "emoji": "💄",
+    "type": "style",
+    "name": "更新UI样式文件",
+    "description": "样式"
+  },
+  {
+    "emoji": "🥚",
+    "type": "format",
+    "name": "格式化代码",
+    "description": "格式化"
+  },
+  {
+    "emoji": "📝",
+    "type": "docs",
+    "name": "添加/更新文档",
+    "description": "文档"
+  },
+  {
+    "emoji": "👌",
+    "type": "perf",
+    "name": "提高性能/优化",
+    "description": "优化"
+  },
+  {
+    "emoji": "🎉",
+    "type": "init",
+    "name": "初次提交/初始化项目",
+    "description": "初始化"
+  },
+  {
+    "emoji": "✅",
+    "type": "test",
+    "name": "增加测试代码",
+    "description": "测试"
+  },
+  {
+    "emoji": "🎨",
+    "type": "refactor",
+    "name": "改进代码结构/代码格式",
+    "description": "优化"
+  },
+  {
+    "emoji": "🚑",
+    "type": "patch",
+    "name": "添加重要补丁",
+    "description": "补丁"
+  },
+  {
+    "emoji": "📦",
+    "type": "file",
+    "name": "添加新文件",
+    "description": "新文件"
+  },
+  {
+    "emoji": "🚀",
+    "type": "publish",
+    "name": "发布新版本",
+    "description": "新版本"
+  },
+  {
+    "emoji": "📌",
+    "type": "tag",
+    "name": "发布版本/添加标签",
+    "description": "书签"
+  },
+  {
+    "emoji": "🔧",
+    "type": "config",
+    "name": "修改配置文件",
+    "description": "配置"
+  },
+  {
+    "emoji": "🙈",
+    "type": "git",
+    "name": "添加或修改.gitignore文件",
+    "description": "不可见"
+  }
+]
+```
 
 ## issues
 
