@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.activate = void 0;
 /*
  * @Author: wangzhongjie
  * @Date: 2020-01-17 19:47:44
@@ -10,8 +11,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 const vscode = require("vscode");
 const utils_1 = require("./utils");
-exports.activate = (context) => {
+const activate = (context) => {
     const disposable = vscode.commands.registerCommand('extension.gitEmoji', utils_1.emojiCommit);
     context.subscriptions.push(disposable);
 };
+exports.activate = activate;
 //# sourceMappingURL=extension.js.map
