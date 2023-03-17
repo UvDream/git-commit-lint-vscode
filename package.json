@@ -33,7 +33,7 @@
       "properties": {
         "gitCommitLintVscode.customFormat": {
           "type": "string",
-          "default": "${code}${emoji}: ",
+          "default": "${type}${emoji}: ",
           "description": "自定义 git 提交格式"
         },
         "gitCommitLintVscode.customType": {

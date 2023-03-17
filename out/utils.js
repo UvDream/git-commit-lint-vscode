@@ -15,10 +15,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @Date: 2023-03-16 14:18:17
  * @Description:
  * @LastEditors: Lanrri
- * @LastEditTime: 2023-03-16 16:33:54
+ * @LastEditTime: 2023-03-17 09:56:57
  */
 const vscode = require("vscode");
-const DEFAULT_CUSTOM_FORMAT = '${code}${emoji}: ';
+const DEFAULT_CUSTOM_FORMAT = '${type}${emoji}: ';
 const CUSTOM_KEY_REGEX = /\${(\w+)}/g;
 const customItems = (emoji, custom_key) => {
     return emoji.map((item) => {
