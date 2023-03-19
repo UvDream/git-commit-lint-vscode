@@ -3,8 +3,8 @@
  * @Email: lanrri@163.com
  * @Date: 2023-03-16 14:18:17
  * @Description:
- * @LastEditors: Lanrri
- * @LastEditTime: 2023-03-17 09:56:57
+ * @LastEditors: FreezeNow
+ * @LastEditTime: 2023-03-19 18:50:57
  */
 import * as vscode from 'vscode';
 import { GitExtension, Repository } from './git';
@@ -84,19 +84,24 @@ const emojiCommit = async (uri?: { rootUri: { path: any } }) => {
     return;
   }
   if (uri) {
-    const selectedRepositoryIndex = git.repositories.findIndex(
-      (repository) => repository.rootUri.path === uri.rootUri.path
-    );
     const selectedRepository = git.getRepository(uri.rootUri.path);
     if (!selectedRepository) {
       return;
     }
     prefixCommit(selectedRepository, value);
-  
+    const accurateLocating = vscode.workspace.getConfiguration().get('gitCommitLintVscode.accurateLocating');
+    if (!accurateLocating) {
+      return;
+    }
+    // 获取在源代码管理存储库的索引值
+    const repositoryIndex = selectedRepository?.repository?.indexGroup?.t ;
+    if (!repositoryIndex) {
+      return;
+    }
     // 存在多个存储库时，关闭其他存储库，定位到选择的存储库并聚焦输入框
     vscode.commands.executeCommand('list.collapseAll');
     vscode.commands.executeCommand('list.focusFirst');
-    for (let i = 0; i < selectedRepositoryIndex; i++) {
+    for (let i = 0; i < repositoryIndex; i++) {
       vscode.commands.executeCommand('list.focusDown');
     }
     vscode.commands.executeCommand('list.expand');
