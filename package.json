@@ -2,7 +2,7 @@
   "name": "git-commit-lint-vscode",
   "displayName": "git-commit-lint-vscode",
   "description": "git提交规范",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "publisher": "UvDream",
   "engines": {
     "vscode": "^1.76.0"
@@ -34,7 +34,7 @@
         "gitCommitLintVscode.customFormat": {
           "type": "string",
           "default": "${type}${emoji}: ",
-          "description": "自定义 git 提交格式"
+          "description": "自定义 git 提交格式(默认格式: '${type}${emoji}: ')"
         },
         "gitCommitLintVscode.customType": {
           "type": "array",
