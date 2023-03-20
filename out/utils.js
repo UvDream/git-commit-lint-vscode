@@ -14,9 +14,9 @@ exports.emojiCommit = void 0;
  * @Author: Lanrri
  * @Email: lanrri@163.com
  * @Date: 2023-03-16 14:18:17
- * @Description:
+ * @Description: 一些工具函数
  * @LastEditors: wangzhongjie
- * @LastEditTime: 2023-03-20 09:41:15
+ * @LastEditTime: 2023-03-20 09:57:27
  */
 const vscode = require("vscode");
 const DEFAULT_CUSTOM_FORMAT = "${type}${emoji}: ";
