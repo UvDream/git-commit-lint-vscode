@@ -53,10 +53,9 @@
 
 你可以在 vscode 的 文件 -> 首选项 -> 设置 -> 扩展 -> git-commit-lint-vscode 中对该插件进行配置，目前可选的配置项为：
 
-1. Accurate Locating: 当存在多个存储库时，是否精确定位到选定存储库的输入框，默认为`否`。注：该功能在多数情况下可以正常运行，只有当你的源代码管理存储库存在多个存储库，如只选择部分存储库或顺序错误时，就会选中错误的输入框。
-2. Cover Input Value: 是否覆盖提交信息, 默认为`是`。如果取消勾选，则会在之前的提交信息前插入 emoji 或者 code。
-3. Custom Format: 自定义 git 提交格式, 默认为`${emoji}${code}: `。可以完全自定义 参数取`Custom Type`里面的`key`
-4. Custom Type: 自定义 git 提交类型, 默认为
+1. Custom Format: 是否覆盖提交信息, 默认为`是`。如果取消勾选，则会在之前的提交信息前插入 emoji 或者 code。
+2. Custom Format: 自定义 git 提交格式, 默认为`${emoji}${code}: `。可以完全自定义 参数取`Custom Type`里面的`key`
+3. Custom Type: 自定义 git 提交类型, 默认为
 
 ```json
 [

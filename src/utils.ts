@@ -54,7 +54,6 @@ const prefixCommit = (repository: Repository, prefix: String) => {
 
 const emojiCommit = async (uri?: { rootUri: { path: any } }) => {
   const git = getGitExtension();
-
   if (!git) {
     vscode.window.showErrorMessage("无法加载git插件! 请先安装git插件!");
     return;
