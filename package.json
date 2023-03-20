@@ -137,11 +137,6 @@
           "type": "boolean",
           "default": true,
           "description": "是否覆盖提交信息"
-        },
-        "gitCommitLintVscode.accurateLocating": {
-          "type": "boolean",
-          "default": false,
-          "description": "当存在多个存储库时，是否精确定位到选定存储库的输入框。注：该功能在多数情况下可以正常运行，只有当你的源代码管理存储库存在多个存储库，如只选择部分存储库或顺序错误时，就会选中错误的输入框。"
         }
       }
     },
