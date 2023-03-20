@@ -153,6 +153,14 @@
 ]
 ```
 
+## 参与贡献
+
+虽然是一个小插件,可能用的人也不是很多,但是感谢所有做过贡献的人!
+
+<a href="https://github.com/UvDream/git-commit-lint-vscode/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=UvDream/git-commit-lint-vscode" />
+</a>
+
 ## issues
 
 使用中可以在这提问,有什么需求同样可以在这提出来
