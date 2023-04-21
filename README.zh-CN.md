@@ -1,19 +1,20 @@
-English | [中文](./README.zh-CN.md)
+[English](./README.md) | 中文
 
 # git-commit-lint-vscode
 
-In daily development, the mainstream code management tool is currently `git`. When we make changes to the code, we first need to `git commit` to submit it to the local repository. `git` requires that when submitting, we must fill in the submission information as a description of the changes, which will be saved in the `commit` history. This makes it possible to find historical code, facilitates review by others, and can also output a CHANGELOG, which greatly improves the development quality of the project.
+在日常的开发中,目前主流的代码管理工具就是 `git` 了,当我们对代码进行改动了,首先得`git commit`提交到本地仓库,`git` 规定了提交时必须填写提交信息作为改动说明,保存 `commit` 历史中,可以找到历史代码,也方便他人 review,还可以输出 CHANGELOG,对项目的研发质量都有很大的提升。
 
-However, in our usual work, most people simply fill in the `commit` without paying much attention to it, which is undoubtedly unfriendly to project management and maintenance. This plugin is used to standardize the `git` submission specifications, making your submission not only "good-looking" but also "practical."
+但是在平时的工作中,大部分对于`commit` 都是简单的填写,没有好好的重视,这对于项目管理和维护来说,无疑是不友好的。这个插件就是规范化`git`提交规范,让你的提交不仅"好看"还"实用"
 
-## Where to start with standardizing `git` submissions?
+## git 规范提交从何说起?
 
-Where does the standardization of `git` submissions begin? Where does it originate? Well, this can be traced back to `Angular`! Let's take a look at the submission specifications of the `Angular` community.
+`git` 规范提交从哪里开始的呢?起源在哪呢?emmmmmm,这就追溯到了`Angular`了!
+让我们看下`Angular`社区的提交规范
 ![](static/angular.png)
 
-Isn't this commit record clear at a glance? Therefore, it is still necessary to follow the `git commit` specifications!
+这个提交记录是不是一目了然?所以`git commit`规范下还是很有必要的!
 
-## explain
+## 说明
 
 |   类型   | emji |           描述            |
 | :------: | :--: | :-----------------------: |
@@ -33,22 +34,22 @@ Isn't this commit record clear at a glance? Therefore, it is still necessary to 
 |  config  |  🔧  |       修改配置文件        |
 |   git    |  🙈  | 添加或修改.gitignore 文件 |
 
-## usage effect
+## 使用效果
 
 ![](static/git-commit-lint.png)
 
-## instructions
+## 使用说明
 
 - 1
   ![](static/first.png)
 - 2
   ![](static/then.png)
 
-## download
+## 下载
 
 在 vscode 扩展中搜索 `git-commit-lint-vscode` 即可找到该插件。
 
-## plug-in-configuration
+## 插件配置
 
 ![](static/extend.png)
 
@@ -154,9 +155,9 @@ Isn't this commit record clear at a glance? Therefore, it is still necessary to 
 ]
 ```
 
-## participation contribution
+## 参与贡献
 
-Although it's just a small plugin, and maybe not many people use it, but thanks to all the contributors!
+虽然是一个小插件,可能用的人也不是很多,但是感谢所有做过贡献的人!
 
 <a href="https://github.com/UvDream/git-commit-lint-vscode/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=UvDream/git-commit-lint-vscode" />
@@ -164,6 +165,6 @@ Although it's just a small plugin, and maybe not many people use it, but thanks 
 
 ## issues
 
-During use, you can ask questions here, and any requirements can also be raised here.
+使用中可以在这提问,有什么需求同样可以在这提出来
 
 https://github.com/UvDream/git-commit-lint-vscode/issues
