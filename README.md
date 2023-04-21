@@ -15,23 +15,23 @@ Isn't this commit record clear at a glance? Therefore, it is still necessary to 
 
 ## explain
 
-|   类型   | emji |           描述            |
-| :------: | :--: | :-----------------------: |
-|   feat   |  ✨  |        引入新功能         |
-|   fix    |  🐛  |         修复 bug          |
-|  style   |  💄  |    更新 UI 样式文按键     |
-|  format  |  🥚  |        格式化代码         |
-|   docs   |  📝  |       添加/更新文档       |
-|   perf   |  👌  |       提高性能/优化       |
-|   init   |  🎉  |    初次提交/初始化项目    |
-|   test   |  ✅  |       增加测试代码        |
-| refactor |  🎨  |   改进代码结构/代码格式   |
-|  patch   |  🚑  |       添加重要补丁        |
-|   file   |  📦  |        添加新文件         |
-| publish  |  🚀  |        发布新版本         |
-|   tag    |  📌  |        发布新版本         |
-|  config  |  🔧  |       修改配置文件        |
-|   git    |  🙈  | 添加或修改.gitignore 文件 |
+|   类型   | emji |                  描述                  |
+| :------: | :--: | :------------------------------------: |
+|   feat   |  ✨  |        Introducing new features        |
+|   fix    |  🐛  |                fix bugs                |
+|  style   |  💄  |      Update UI style text button       |
+|  format  |  🥚  |              format code               |
+|   docs   |  📝  |        Add/Update Documentation        |
+|   perf   |  👌  |      Improve performance/optimize      |
+|   init   |  🎉  |   Initial commit/initialize project    |
+|   test   |  ✅  |             Add test code              |
+| refactor |  🎨  | Improve code structure/code formatting |
+|  patch   |  🚑  |          Add critical patches          |
+|   file   |  📦  |              add new file              |
+| publish  |  🚀  |         release a new version          |
+|   tag    |  📌  |             post a new tag             |
+|  config  |  🔧  |     Modify the configuration file      |
+|   git    |  🙈  |     Add or modify .gitignore files     |
 
 ## usage effect
 
@@ -46,18 +46,18 @@ Isn't this commit record clear at a glance? Therefore, it is still necessary to 
 
 ## download
 
-在 vscode 扩展中搜索 `git-commit-lint-vscode` 即可找到该插件。
+You can search for the `git-commit-lint-vscode` plugin in the VS Code extensions marketplace.
 
 ## plug-in-configuration
 
 ![](static/extend.png)
 
-你可以在 vscode 的 文件 -> 首选项 -> 设置 -> 扩展 -> git-commit-lint-vscode 中对该插件进行配置，目前可选的配置项为：
+You can configure the `git-commit-lint-vscode` plugin by going to File -> Preferences -> Settings -> Extensions -> git-commit-lint-vscode in VS Code. Currently available configuration options are:
 
-1. Accurate Locating: 当存在多个存储库时，是否精确定位到选定存储库的输入框，默认为`否`。注：该功能在多数情况下可以正常运行，只有当你的源代码管理存储库存在多个存储库，如只选择部分存储库或顺序错误时，就会选中错误的输入框。
-2. Cover Input Value: 是否覆盖提交信息, 默认为`是`。如果取消勾选，则会在之前的提交信息前插入 emoji 或者 code。
-3. Custom Format: 自定义 git 提交格式, 默认为`${emoji}${code}: `。可以完全自定义 参数取`Custom Type`里面的`key`
-4. Custom Type: 自定义 git 提交类型, 默认为
+1. Accurate Locating: Whether to accurately locate the input box of the selected repository when there are multiple repositories, default is `No`. Note: This feature works correctly in most cases, but if your source code management repository has multiple repositories, such as selecting only part of the repository or the order is incorrect, the wrong input box will be selected.
+2. Cover Input Value: Whether to cover the commit message, default is `Yes`. If unchecked, an emoji or code will be inserted before the previous commit message.
+3. Custom Format: Custom git commit format, default is `${emoji}${code}: `. The parameters are taken from the `key` in `Custom Type`, and can be fully customized.
+4. Custom Type: Custom git commit types, default is
 
 ```json
 [

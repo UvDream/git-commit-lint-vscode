@@ -30,7 +30,7 @@
 |  patch   |  🚑  |       添加重要补丁        |
 |   file   |  📦  |        添加新文件         |
 | publish  |  🚀  |        发布新版本         |
-|   tag    |  📌  |        发布新版本         |
+|   tag    |  📌  |        发布新标签         |
 |  config  |  🔧  |       修改配置文件        |
 |   git    |  🙈  | 添加或修改.gitignore 文件 |
 
